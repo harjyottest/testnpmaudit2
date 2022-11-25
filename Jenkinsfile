@@ -13,12 +13,13 @@ node(){
   stage('Prepare')   {
 
       def output = sh script: "npm audit", returnStdout: true
-      ndef summary = output.split("\n")[-1]
+      def summary = output.split("\n")[-1]
 
   }
 
   stage('Build')   {
-      mtaBuild script:this
+        def output = sh script: "npm audit", returnStdout: true
+        def summary = output.split("\n")[-1]
   }
 
   stage('Deploy')   {
