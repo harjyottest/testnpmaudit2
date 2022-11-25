@@ -16,6 +16,8 @@ general:
 
 ### Step-specific configuration
 steps:
+  init:
+    npmaudit: npm audit
   mavenExecute:
     dockerImage: devxci/mbtci:1.0.14
 
